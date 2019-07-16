@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ModalWebViewController: ee30010c08b8298716a70e1ea5185e56e56d083b
+  ModalWebViewController: c0d59ae94a34a2650576e39b954285f3e6d96838
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 

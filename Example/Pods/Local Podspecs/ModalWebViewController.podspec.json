@@ -1,9 +1,9 @@
 {
   "name": "ModalWebViewController",
   "version": "0.1.0",
-  "summary": "A short description of ModalWebViewController.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Kalyan Vishnubhatla/ModalWebViewController",
+  "summary": "An iOS view controller wrapper for WKWebView.",
+  "description": "ModalWebViewController wrap up a WKWebView and implements a few standard features as iOS Safari does. So web views can be easily used in your apps out-of-the-box.",
+  "homepage": "https://github.com/kalvish21/ModalWebViewController",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,17 @@
     "Kalyan Vishnubhatla": "kalvish@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Kalyan Vishnubhatla/ModalWebViewController.git",
+    "git": "https://github.com/kalvish21/ModalWebViewController.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "ModalWebViewController/Classes/**/*"
+  "source_files": "ModalWebViewController/Classes/**/*",
+  "resources": "ModalWebViewController/Assets/**/*.{png}",
+  "frameworks": [
+    "UIKit",
+    "WebKit"
+  ],
+  "swift_version": "5.0"
 }

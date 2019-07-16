@@ -31,6 +31,7 @@ DESC
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'ModalWebViewController/Classes/**/*'
+  s.resources = 'ModalWebViewController/Assets/**/*.{png}'
   
   # s.resource_bundles = {
   #   'ModalWebViewController' => ['ModalWebViewController/Assets/*.png']
