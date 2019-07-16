@@ -1,0 +1,22 @@
+{
+  "name": "ModalWebViewController",
+  "version": "0.1.0",
+  "summary": "A short description of ModalWebViewController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Kalyan Vishnubhatla/ModalWebViewController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Kalyan Vishnubhatla": "kalvish@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Kalyan Vishnubhatla/ModalWebViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ModalWebViewController/Classes/**/*"
+}

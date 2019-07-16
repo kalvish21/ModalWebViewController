@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ModalWebViewController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ModalWebViewController.'
+  s.summary          = 'An iOS view controller wrapper for WKWebView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+ModalWebViewController wrap up a WKWebView and implements a few standard features as iOS Safari does. So web views can be easily used in your apps out-of-the-box.
+DESC
 
-  s.homepage         = 'https://github.com/Kalyan Vishnubhatla/ModalWebViewController'
+  s.homepage         = 'https://github.com/kalvish21/ModalWebViewController'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kalyan Vishnubhatla' => 'kalvish@gmail.com' }
-  s.source           = { :git => 'https://github.com/Kalyan Vishnubhatla/ModalWebViewController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/kalvish21/ModalWebViewController.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'ModalWebViewController/Classes/**/*'
   
@@ -37,6 +37,8 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'WebKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.swift_version = '5.0'
+  
 end

@@ -29,7 +29,8 @@
 
 /* Begin PBXFileReference section */
 		04393E2DDC55D7275ED8E42B /* Pods-ModalWebViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalWebViewController_Example.release.xcconfig"; path = "Target Support Files/Pods-ModalWebViewController_Example/Pods-ModalWebViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		0EDC9A8761CD9527EE5AA19D /* ModalWebViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ModalWebViewController.podspec; path = ../ModalWebViewController.podspec; sourceTree = "<group>"; };
+		0EDC9A8761CD9527EE5AA19D /* ModalWebViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ModalWebViewController.podspec; path = ../ModalWebViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		302E96F122DD5DAB00D8A00E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		566894F324E810B50562357B /* Pods-ModalWebViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalWebViewController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ModalWebViewController_Tests/Pods-ModalWebViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ModalWebViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalWebViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,12 +42,12 @@
 		607FACE51AFB9204008FA782 /* ModalWebViewController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalWebViewController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		64A9BDF37C1C30DF76CE6B7F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		64A9BDF37C1C30DF76CE6B7F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		73FE2DA6C6B1B35D4FCAA0B3 /* Pods-ModalWebViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalWebViewController_Example.debug.xcconfig"; path = "Target Support Files/Pods-ModalWebViewController_Example/Pods-ModalWebViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7A90BDE84726679B82C3015F /* Pods_ModalWebViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModalWebViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B391B854C5A0F741C44C16 /* Pods_ModalWebViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModalWebViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C5F8E89E840A0242991303 /* Pods-ModalWebViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalWebViewController_Tests.release.xcconfig"; path = "Target Support Files/Pods-ModalWebViewController_Tests/Pods-ModalWebViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E48B99FF79591298751F86FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E48B99FF79591298751F86FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,13 +148,13 @@
 				566894F324E810B50562357B /* Pods-ModalWebViewController_Tests.debug.xcconfig */,
 				96C5F8E89E840A0242991303 /* Pods-ModalWebViewController_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B9466FEF6D8BB81DFB5AC09C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				302E96F122DD5DAB00D8A00E /* Foundation.framework */,
 				7A90BDE84726679B82C3015F /* Pods_ModalWebViewController_Example.framework */,
 				92B391B854C5A0F741C44C16 /* Pods_ModalWebViewController_Tests.framework */,
 			);
@@ -228,6 +229,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -508,12 +510,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ModalWebViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -523,12 +526,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ModalWebViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -545,6 +549,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,6 +568,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

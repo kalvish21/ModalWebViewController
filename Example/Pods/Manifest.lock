@@ -1,0 +1,27 @@
+PODS:
+  - ModalWebViewController (0.1.0)
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - ModalWebViewController (from `../`)
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  ModalWebViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ModalWebViewController: ee30010c08b8298716a70e1ea5185e56e56d083b
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: 48b32c50a761def996f2d818e997430e17481516
+
+COCOAPODS: 1.6.0
