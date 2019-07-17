@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import WebKit
+import PopMenu
 
 open class WebViewController: UIViewController {
     var url: URL!
@@ -40,13 +41,15 @@ open class WebViewController: UIViewController {
         title = url.absoluteString
         setup()
         webView.load(URLRequest(url: url))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(cancelClicked))
         
         let backImage = UIImage(named: "back.png", in: Bundle(for: WebViewController.self), compatibleWith: nil)
         let forwardImage = UIImage(named: "forward.png", in: Bundle(for: WebViewController.self), compatibleWith: nil)
         backBarButtonItem = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backClicked))
         forwardBarButtonItem = UIBarButtonItem(image: forwardImage, style: .plain, target: self, action: #selector(backClicked))
         navigationItem.leftBarButtonItems = [backBarButtonItem, forwardBarButtonItem]
+        
+        let menuImage = UIImage(named: "menu.png", in: Bundle(for: WebViewController.self), compatibleWith: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: menuImage, style: .plain, target: self, action: #selector(menuClicked))
     }
     
     private func setup() {
@@ -64,8 +67,19 @@ open class WebViewController: UIViewController {
         webView.goForward()
     }
     
-    @objc func cancelClicked() {
-        navigationController?.dismiss(animated: true, completion: nil)
+    @objc func menuClicked() {
+        let menu = PopMenuViewController(actions: [
+            PopMenuDefaultAction(title: "Refresh", didSelect: { action in
+                self.webView.reload()
+            }),
+            PopMenuDefaultAction(title: "Copy", didSelect: { action in
+                UIPasteboard.general.string = self.url.absoluteString
+            }),
+            PopMenuDefaultAction(title: "Open in Safari", didSelect: { action in
+                UIApplication.shared.open(self.url, options: [:], completionHandler: nil)
+            })
+        ])
+        present(menu, animated: true, completion: nil)
     }
 }
 

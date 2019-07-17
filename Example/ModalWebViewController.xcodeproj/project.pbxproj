@@ -275,12 +275,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ModalWebViewController_Example/Pods-ModalWebViewController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ModalWebViewController/ModalWebViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/NewPopMenu/PopMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ModalWebViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -40,6 +40,7 @@ DESC
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'WebKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'NewPopMenu', '~> 2.0'
   s.swift_version = '5.0'
   
 end
